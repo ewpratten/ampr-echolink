@@ -1,0 +1,152 @@
+version: "3"
+
+services:
+  node_1:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.4"
+        NODE_NUM: "1"
+    volumes:
+      - ./certs/echoproxy1.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.5"
+        NODE_NUM: "2"
+    volumes:
+      - ./certs/echoproxy2.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_3:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.6"
+        NODE_NUM: "3"
+    volumes:
+      - ./certs/echoproxy3.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_4:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.7"
+        NODE_NUM: "4"
+    volumes:
+      - ./certs/echoproxy4.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_5:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.8"
+        NODE_NUM: "5"
+    volumes:
+      - ./certs/echoproxy5.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_6:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.9"
+        NODE_NUM: "6"
+    volumes:
+      - ./certs/echoproxy6.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_7:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.10"
+        NODE_NUM: "7"
+    volumes:
+      - ./certs/echoproxy7.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_8:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.11"
+        NODE_NUM: "8"
+    volumes:
+      - ./certs/echoproxy8.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_9:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.12"
+        NODE_NUM: "9"
+    volumes:
+      - ./certs/echoproxy9.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  node_10:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        AMPR_ADDR: "44.31.62.13"
+        NODE_NUM: "10"
+    volumes:
+      - ./certs/echoproxy10.conf:/ampr.conf
+    privileged: true
+    tty: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
