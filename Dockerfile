@@ -1,22 +1,6 @@
-FROM alpine:latest
+FROM ewpratten/echolink-base
 ARG AMPR_ADDR
 ARG NODE_NUM
-
-# Load everything needed for wireguard
-RUN apk update
-RUN apk add wireguard-tools
-RUN apk add iptables
-RUN apk add ip6tables
-
-# Load Java
-RUN apk add openjdk8
-
-# Load webserver
-# RUN apk add openrc
-RUN apk add lighttpd
-# RUN rc-update add lighttpd default
-RUN sed -i -r 's#\#.*server.port.*=.*#server.port          = 80#g' /etc/lighttpd/lighttpd.conf
-RUN sed -i -r 's#\#.*server.bind.*=.*#server.bind          = "0.0.0.0"#g' /etc/lighttpd/lighttpd.conf
 
 COPY ./entrypoint.sh /entrypoint.sh
 COPY ./ELProxy.conf /ELProxy.conf
